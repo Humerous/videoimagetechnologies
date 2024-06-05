@@ -1,7 +1,6 @@
 # Video Image Technologies Company Website
 
-Bootstrap Business website for software solutions, but could easily be changed to fit any business. Dark-themed design with modals and other features.
-
+Bootstrap Business website for the film and media industry.
 <img src="./assets/img/VIT home view.jpg" />
 
 ## Features
