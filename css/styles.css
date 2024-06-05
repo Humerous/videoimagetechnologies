@@ -3,7 +3,8 @@
 }
 
 .header {
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("../assets/img/Header-Image/thomas-bennie.webp") left center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
+    url('../assets/img/Header-Image/thomas-bennie.webp') left center no-repeat;
   background-size: cover;
   height: 600px;
 }
@@ -52,7 +53,12 @@
 }
 
 .get-quote-bg {
-  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)), url("../assets/img/random/amy-harrison.webp") center center no-repeat;
+  background: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.9)
+    ),
+    url('../assets/img/random/amy-harrison.webp') center center no-repeat;
   background-size: cover;
 }
 
@@ -62,6 +68,18 @@
   margin-bottom: 0.2rem; /* Add this line */
 }
 
+// .details .vertical-decoration {
+//   top: 0;
+//   left: 0;
+//   width: 24px;
+// }
+
+// .details-2 .vertical-decoration {
+//   top: 5%;
+//   right: 0;
+//   width: 24px;
+// }
+
 .quote-text {
   font-size: 0.8em;
   font-style: italic;
@@ -69,26 +87,6 @@
   padding: 0.5rem;
   border: 2px solid #565b63;
   box-shadow: 0 0 10px 0.1rem rgba(62, 62, 62, 0.6);
-}
-
-.badge {
-  background-color: #333; /* Dark background */
-  color: #fff; /* Light text */
-  font-size: 1.5rem; /* Default font size */
-  border-radius: 0.25rem; /* Rounded corners */
-  padding: 0.5rem 1rem; /* Padding */
-}
-
-.badge.fs-3 {
-  font-size: 1.75rem; /* Larger font size for fs-3 */
-}
-
-.badge.fs-4 {
-  font-size: 1.5rem; /* Default font size */
-}
-
-.text-uppercase {
-  text-transform: uppercase; /* Uppercase text */
 }
 
 /* Back to Top Button */
@@ -126,19 +124,25 @@
     display: none;
   }
 }
+
 @media (max-width: 991.98px) {
   .xl-text {
     font-size: 50px;
   }
+
   .header {
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)), url("../assets/img/random/debby-hudson.jpeg") center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)),
+      url("../assets/img/Header-Image/thomas-bennie.webp") center center no-repeat;
   }
+
   .partners img {
     max-width: 100%;
     height: auto;
   }
-  .footer {
-    text-align: center;
-  }
+}
+
+@media (max-width: 766.98px) {
+}
+@media (max-width: 575.98px) {
 }
