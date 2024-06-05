@@ -1045,8 +1045,7 @@
         <div class="row">
           <div class="col-lg-6">
             <div class="text-container">
-              <div
-                class="col-md-6 d-flex flex-column align-center-center text-center">
+              <div class="col-md-6 text-center mb-3">
                 <h5>
                   <span
                     class="badge bg-success text-dark fs-3 rounded-2 text-uppercase mb-3">
@@ -1062,31 +1061,41 @@
                   <input
                     type="text"
                     class="form-control"
-                    placeholder="Enter name" />
+                    placeholder="Enter name"
+                    required />
+                  <!-- Added 'required' attribute -->
                 </div>
                 <div class="mb-3">
                   <input
                     type="email"
                     class="form-control"
-                    placeholder="Enter email" />
+                    placeholder="Enter email"
+                    required />
+                  <!-- Added 'required' attribute -->
                 </div>
                 <div class="mb-3">
                   <input
-                    type="text"
+                    type="tel"
                     class="form-control"
-                    placeholder="Enter phone" />
+                    placeholder="Enter phone"
+                    required />
+                  <!-- Changed type to 'tel' for phone number and added 'required' attribute -->
                 </div>
                 <div class="mb-3">
                   <textarea
                     class="form-control"
                     placeholder="Enter message"
-                    rows="8"></textarea>
+                    rows="8"
+                    required></textarea>
+                  <!-- Added 'required' attribute -->
                 </div>
                 <div class="d-grid gap-2 mb-3">
-                  <input
+                  <button
                     type="submit"
-                    value="Send"
-                    class="btn btn-success btn-block" />
+                    class="btn btn-success btn-block">
+                    Send
+                  </button>
+                  <!-- Changed input type to 'button' for better semantics -->
                 </div>
               </form>
               <!-- Form End -->
