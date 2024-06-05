@@ -691,94 +691,114 @@
     <!-- our-solutions-modal -->
     <div
       id="our-solutions-modal"
-      class="modal fade">
+      class="modal fade"
+      tabindex="-1"
+      aria-labelledby="ourSolutionsModalLabel"
+      aria-hidden="true">
       <div class="modal-dialog modal-lg mt-7">
         <div class="modal-content py-5 mb-4">
-          <div class="row text-center">
-            <h3>
-              <span class="badge bg-danger fs-4 rounded-2 text-uppercase"
-                >Our Solutions
-              </span>
-            </h3>
+          <div class="modal-header">
+            <h4
+              class="modal-title"
+              id="ourSolutionsModalLabel">
+              Our Solutions
+            </h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row text-center">
+              <h3>
+                <span class="badge bg-danger fs-4 rounded-2 text-uppercase"
+                  >Our Solutions
+                </span>
+              </h3>
 
-            <h6 class="text-danger">
-              We are giving you perfect solutions with our proficient services.
-            </h6>
+              <h6 class="text-danger">
+                We are giving you perfect solutions with our proficient
+                services.
+              </h6>
 
-            <div class="col-lg-6">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> 24/7 Support
-                </li>
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> Technical Support
-                </li>
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> Data Solutions
-                </li>
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> Cloud Base Solutions
-                </li>
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> Workflow Solutions
-                </li>
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> Live Streaming
-                  Solutions
-                </li>
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> Portable Power
-                  Solutions
-                </li>
-              </ul>
+              <div class="col-lg-6">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> 24/7 Support
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> Technical Support
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> Data Solutions
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> Cloud Base
+                    Solutions
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> Workflow Solutions
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> Live Streaming
+                    Solutions
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> Portable Power
+                    Solutions
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> Playback Solutions
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> On-Set Solutions
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> Data Wrangler
+                    Package
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> Customised
+                    Packages
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> Documents
+                    Solutions
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> Post Production
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> Colour Solutions
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="col-lg-6">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> Playback Solutions
-                </li>
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> On-Set Solutions
-                </li>
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> Data Wrangler
-                  Package
-                </li>
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> Customised Packages
-                </li>
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> Documents Solutions
-                </li>
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> Post Production
-                </li>
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> Colour Solutions
-                </li>
-              </ul>
+            <div
+              class="d-flex flex-column justify-content-center align-items-center">
+              <img
+                src="/assets/img/vit-logo/vit-logo-64x64.webp"
+                alt="" />
             </div>
           </div>
-          <div
-            class="d-flex flex-column justify-content-center align-items-center">
-            <img
-              src="/assets/img/vit-logo/vit-logo-64x64.webp"
-              alt="" />
+          <div class="modal-footer justify-content-center">
+            <a
+              href="#contact-us"
+              class="btn btn-danger text-light btn-lg mr-2 btn-quote"
+              >Get a quote</a
+            >
+            <button
+              type="button"
+              class="btn btn-secondary btn-lg"
+              data-bs-dismiss="modal">
+              Close
+            </button>
           </div>
-        </div>
-        <div class="modal-footer justify-content-center">
-          <a
-            title="VideoImageTechnologies Quote"
-            href="contact-us"
-            aria-label="contact-us"
-            class="btn btn-danger text-light btn-lg mr-2"
-            >Get a quote</a
-          >
-          <button
-            class="btn btn-secondary btn-lg"
-            data-bs-dismiss="modal">
-            Close
-          </button>
         </div>
       </div>
     </div>
@@ -786,62 +806,73 @@
     <!-- Service 1 -  Video Take-Off (VTO):COMPLETE -->
     <div
       class="modal fade"
-      id="videoTakeOff-modal">
+      id="videoTakeOff-modal"
+      tabindex="-1"
+      aria-labelledby="videoTakeOffModalLabel"
+      aria-hidden="true">
       <div class="modal-dialog modal-md mt-7">
         <div class="modal-content py-5 mb-4">
-          <div class="row text-center">
-            <div
-              class="d-flex flex-column justify-content-center align-items-center mb-4">
-              <img
-                src="/assets/img/vit-logo/vit-logo-64x64.webp"
-                alt="" />
-            </div>
-            <h3>
-              <span class="badge bg-danger fs-4 rounded-2 text-uppercase"
-                >Video Take-off</span
-              >
-            </h3>
-            <h5 class="text-danger">Core Video Services</h5>
-            <h6 class="text-danger">Starting R7500, 00...</h6>
-            <div class="col-lg-12">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> Q-Take Rentals
-                </li>
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> Video Assist Rentals
-                </li>
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> Wireless Video
-                  Transmission
-                </li>
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> Handheld Monitor
-                </li>
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> 4k Production
-                  Monitors
-                </li>
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> and more....
-                </li>
-              </ul>
+          <div class="modal-header">
+            <h4
+              class="modal-title"
+              id="videoTakeOffModalLabel">
+              Video Take-off
+            </h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row text-center">
+              <div class="col-12 mb-4">
+                <img
+                  src="/assets/img/vit-logo/vit-logo-64x64.webp"
+                  alt="Video Image Technologies Logo" />
+              </div>
+              <div class="col-12">
+                <h5 class="text-danger">Core Video Services</h5>
+                <h6 class="text-danger">Starting R7500, 00...</h6>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> Q-Take Rentals
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> Video Assist
+                    Rentals
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> Wireless Video
+                    Transmission
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> Handheld Monitor
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> 4k Production
+                    Monitors
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> and more....
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="modal-footer justify-content-center">
-          <a
-            title="VideoImageTechnologies Quote"
-            href="contact-us"
-            aria-label="contact-us"
-            class="btn btn-danger text-light btn-lg mr-2"
-            >Get a quote</a
-          >
-          <button
-            class="btn btn-secondary btn-lg"
-            data-bs-dismiss="modal">
-            Close
-          </button>
+          <div class="modal-footer justify-content-center">
+            <a
+              href="#contact-us"
+              class="btn btn-danger text-light btn-lg mr-2 btn-quote"
+              >Get a quote</a
+            >
+            <button
+              type="button"
+              class="btn btn-secondary btn-lg"
+              data-bs-dismiss="modal">
+              Close
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -849,61 +880,71 @@
     <!-- Service 2 -  Digital Image Technician (DIT):COMPLETE -->
     <div
       class="modal fade"
-      id="digitalImageTechnition-modal">
+      id="digitalImageTechnition-modal"
+      tabindex="-1"
+      aria-labelledby="digitalImageTechnitionModalLabel"
+      aria-hidden="true">
       <div class="modal-dialog modal-md mt-7">
         <div class="modal-content py-5 mb-4">
-          <div class="row text-center">
-            <div
-              class="d-flex flex-column justify-content-center align-items-center mb-4">
-              <img
-                src="/assets/img/vit-logo/vit-logo-64x64.webp"
-                alt="" />
-            </div>
-            <h3>
-              <span class="badge bg-danger fs-4 rounded-2 text-uppercase"
-                >Digital Image Technician</span
-              >
-            </h3>
-            <h5 class="text-danger">Core Digital Services</h5>
-            <h6 class="text-danger">Starting R7500, 00...</h6>
-            <div class="col-lg-12">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> DIT Packages
-                </li>
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> Data Wrangler
-                  Package
-                </li>
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> Data Management
-                </li>
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> On-Set Monitoring
-                </li>
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> Colour Management
-                </li>
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> and more....
-                </li>
-              </ul>
+          <div class="modal-header">
+            <h4
+              class="modal-title"
+              id="digitalImageTechnitionModalLabel">
+              Digital Image Technician
+            </h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row text-center">
+              <div class="col-12 mb-4">
+                <img
+                  src="/assets/img/vit-logo/vit-logo-64x64.webp"
+                  alt="Video Image Technologies Logo" />
+              </div>
+              <div class="col-12">
+                <h5 class="text-danger">Core Digital Services</h5>
+                <h6 class="text-danger">Starting R7500, 00...</h6>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> DIT Packages
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> Data Wrangler
+                    Package
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> Data Management
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> On-Set Monitoring
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> Colour Management
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> and more....
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="modal-footer justify-content-center">
-          <a
-            title="VideoImageTechnologies Quote"
-            href="contact-us"
-            aria-label="contact-us"
-            class="btn btn-danger text-light btn-lg mr-2"
-            >Get a quote</a
-          >
-          <button
-            class="btn btn-secondary btn-lg"
-            data-bs-dismiss="modal">
-            Close
-          </button>
+          <div class="modal-footer justify-content-center">
+            <a
+              href="#contact-us"
+              class="btn btn-danger text-light btn-lg mr-2 btn-quote"
+              >Get a quote</a
+            >
+            <button
+              type="button"
+              class="btn btn-secondary btn-lg"
+              data-bs-dismiss="modal">
+              Close
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -911,62 +952,72 @@
     <!-- Service 3 -  Data & Workflow: COMPLETE -->
     <div
       class="modal fade"
-      id="data&Workflow-modal">
+      id="data&Workflow-modal"
+      tabindex="-1"
+      aria-labelledby="dataAndWorkflowModalLabel"
+      aria-hidden="true">
       <div class="modal-dialog modal-md mt-7">
         <div class="modal-content py-5 mb-4">
-          <div class="row text-center">
-            <div
-              class="d-flex flex-column justify-content-center align-items-center mb-4">
-              <img
-                src="/assets/img/vit-logo/vit-logo-64x64.webp"
-                alt="" />
-            </div>
-            <h3>
-              <span class="badge bg-danger fs-4 rounded-2 text-uppercase"
-                >Data & Workflow Services</span
-              >
-            </h3>
-            <h5 class="text-danger">Core Workflow Services</h5>
-
-            <div class="col-lg-12">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> File Upload
-                  Solutions (FTP)
-                </li>
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> Data Wrangler
-                  Package
-                </li>
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> Workflow Solutions
-                </li>
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> Post Solutions
-                </li>
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> Live Streaming
-                  Solutions
-                </li>
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> and more....
-                </li>
-              </ul>
+          <div class="modal-header">
+            <h4
+              class="modal-title"
+              id="dataAndWorkflowModalLabel">
+              Data & Workflow Services
+            </h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row text-center">
+              <div class="col-12 mb-4">
+                <img
+                  src="/assets/img/vit-logo/vit-logo-64x64.webp"
+                  alt="Video Image Technologies Logo" />
+              </div>
+              <div class="col-12">
+                <h5 class="text-danger">Core Workflow Services</h5>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> File Upload
+                    Solutions (FTP)
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> Data Wrangler
+                    Package
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> Workflow Solutions
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> Post Solutions
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> Live Streaming
+                    Solutions
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> and more....
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="modal-footer justify-content-center">
-          <a
-            href="contact-us"
-            aria-label="contact-us"
-            class="btn btn-danger text-light btn-lg mr-2"
-            >Get a quote</a
-          >
-          <button
-            class="btn btn-secondary btn-lg"
-            data-bs-dismiss="modal">
-            Close
-          </button>
+          <div class="modal-footer justify-content-center">
+            <a
+              href="#contact-us"
+              class="btn btn-danger text-light btn-lg mr-2 btn-quote"
+              >Get a quote</a
+            >
+            <button
+              type="button"
+              class="btn btn-secondary btn-lg"
+              data-bs-dismiss="modal">
+              Close
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -974,63 +1025,72 @@
     <!-- Service 4 -  Additional Services -->
     <div
       class="modal fade"
-      id="additionalServices-modal">
+      id="additionalServices-modal"
+      tabindex="-1"
+      aria-labelledby="additionalServicesModalLabel"
+      aria-hidden="true">
       <div class="modal-dialog modal-md mt-7">
         <div class="modal-content py-5 mb-4">
-          <div class="row text-center">
-            <div
-              class="d-flex flex-column justify-content-center align-items-center mb-4">
-              <img
-                src="/assets/img/vit-logo/vit-logo-64x64.webp"
-                alt="" />
-            </div>
-            <h3>
-              <span class="badge bg-danger fs-4 rounded-2 text-uppercase"
-                >Support Solutions</span
-              >
-            </h3>
-            <h5 class="text-danger">Core Support Services</h5>
-
-            <div class="col-lg-12">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> 24/7 Support
-                </li>
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> Archiving Solutions
-                  (LTO)
-                </li>
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> Portable Power
-                  Solutions
-                </li>
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> Audio Solutions
-                </li>
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> Equipment Rental
-                  Solutions
-                </li>
-                <li class="list-group-item">
-                  <i class="fas fa-check custom-green"></i> and more....
-                </li>
-              </ul>
+          <div class="modal-header">
+            <h4
+              class="modal-title"
+              id="additionalServicesModalLabel">
+              Support Solutions
+            </h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row text-center">
+              <div class="col-12 mb-4">
+                <img
+                  src="/assets/img/vit-logo/vit-logo-64x64.webp"
+                  alt="Video Image Technologies Logo" />
+              </div>
+              <div class="col-12">
+                <h5 class="text-danger">Core Support Services</h5>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> 24/7 Support
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> Archiving
+                    Solutions (LTO)
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> Portable Power
+                    Solutions
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> Audio Solutions
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> Equipment Rental
+                    Solutions
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-check custom-green"></i> and more....
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="modal-footer justify-content-center">
-          <a
-            title="VideoImageTechnologies Quote"
-            href="contact-us"
-            aria-label="contact-us"
-            class="btn btn-danger text-light btn-lg mr-2"
-            >Get a quote</a
-          >
-          <button
-            class="btn btn-secondary btn-lg"
-            data-bs-dismiss="modal">
-            Close
-          </button>
+          <div class="modal-footer justify-content-center">
+            <a
+              href="#contact-us"
+              class="btn btn-danger text-light btn-lg mr-2 btn-quote"
+              >Get a quote</a
+            >
+            <button
+              type="button"
+              class="btn btn-secondary btn-lg"
+              data-bs-dismiss="modal">
+              Close
+            </button>
+          </div>
         </div>
       </div>
     </div>
