@@ -63,6 +63,32 @@ if (mainNav) {
   });
 }
 
+// Wait for the DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function () {
+  // Get all elements with the class "btn-quote" inside modals
+  var quoteBtns = document.querySelectorAll('.modal .btn-quote');
+
+  // Add a click event listener to each button
+  quoteBtns.forEach(function (quoteBtn) {
+    quoteBtn.addEventListener('click', function () {
+      // Get the parent modal of the clicked button
+      var modal = quoteBtn.closest('.modal');
+
+      // Close the modal
+      var modalInstance = bootstrap.Modal.getInstance(modal);
+      modalInstance.hide();
+
+      // Get the target section ID from the button's href attribute
+      var targetSectionId = quoteBtn.getAttribute('href').replace('#', '');
+
+      // Scroll to the target section
+      document
+        .getElementById(targetSectionId)
+        .scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+});
+
 // Change Footer year
 const companyStartYear = 2016;
 const currentYear = new Date().getFullYear();
