@@ -55,6 +55,15 @@
   color: #28a745 !important;
 }
 
+.get-solutions-bg {
+  background: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.9)
+    ),
+    url('../assets/img/random/theregisti.webp') center center no-repeat;
+  background-size: cover;
+}
 .get-quote-bg {
   background: linear-gradient(
       to bottom right,
