@@ -1,9 +1,13 @@
+* {
+}
+
 .xl-text {
   font-size: 65px;
 }
 
 .header {
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("../assets/img/Header-Image/thomas-bennie.webp") left center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
+    url('../assets/img/Header-Image/thomas-bennie.webp') left center no-repeat;
   background-size: cover;
   height: 600px;
 }
@@ -52,7 +56,12 @@
 }
 
 .get-quote-bg {
-  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)), url("../assets/img/random/amy-harrison.webp") center center no-repeat;
+  background: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.9)
+    ),
+    url('../assets/img/random/amy-harrison.webp') center center no-repeat;
   background-size: cover;
 }
 
@@ -70,7 +79,6 @@
   border: 2px solid #565b63;
   box-shadow: 0 0 10px 0.1rem rgba(62, 62, 62, 0.6);
 }
-
 .badge {
   background-color: #333; /* Dark background */
   color: #fff; /* Light text */
@@ -100,45 +108,31 @@
   z-index: 99;
 }
 
-@media (min-width: 1198.98px) {
-  .navbar-expand-xl {
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-  }
-  .navbar-expand-xl .navbar-nav {
-    flex-direction: row;
-  }
-  .navbar-expand-xl .navbar-nav .dropdown-menu {
-    position: absolute;
-  }
-  .navbar-expand-xl .navbar-nav .nav-link {
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
-  }
-  .navbar-expand-xl .navbar-nav-scroll {
-    overflow: visible;
-  }
-  .navbar-expand-xl .navbar-collapse {
-    display: flex !important;
-    flex-basis: auto;
-  }
-  .navbar-expand-xl .navbar-toggler {
-    display: none;
-  }
-}
 @media (max-width: 991.98px) {
   .xl-text {
     font-size: 50px;
   }
+
   .header {
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)), url("../assets/img/random/amy-harrison.webp") center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)),
+      url('../assets/img/random/amy-harrison.webp') center center no-repeat;
   }
+
   .partners img {
     max-width: 100%;
     height: auto;
   }
+
   .footer {
     text-align: center;
+  }
+}
+
+@media (max-width: 766.98px) {
+}
+@media (max-width: 575.98px) {
+  .partners {
+    display: none;
   }
 }
