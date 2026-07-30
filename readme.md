@@ -1,42 +1,27 @@
-# Video Image Technologies Company Website
+# Video Image Technologies
 
-Bootstrap Business website for the film and media industry.
-<img src="./assets/img/VIT home view.jpg" />
+Responsive coming-soon landing page for Video Image Technologies.
 
-## Features
+## Current experience
 
-- Dark design with bright buttons & text for contrast
-- Responsive design
-- Replaceme script for rolling words
-- Navbar scroll effect
-- Video modal
-- Animated play button
-- Pricing grid
-- Styled modals for projects
-- Font awesome icons
+- Approved VIT banner and spectrum branding
+- Bootstrap 5.3.8 responsive layout
+- JavaScript-powered launch notification form
+- Correct LinkedIn and Instagram links
+- Desktop interaction hotspots aligned to the approved artwork
+- Dedicated mobile email and social controls
+- Accessible keyboard focus, live form feedback, reduced-motion support, and VIT navy form states
+- Open Graph and SEO metadata
 
-## Usage
+## Contact links
 
-This website is built with [Bootstrap](https://getbootstrap.com/) and [Sass](https://sass-lang.com/). It uses [Font Awesome](https://fontawesome.com/) for icons.
+- Instagram: https://www.instagram.com/videoimagetechnologies
+- LinkedIn: https://www.linkedin.com/in/david-miller-07376015/
 
-In order to customize this website, you need to install [Node.js](https://nodejs.org/en/). Then, clone this repository and run:
+## Deployment
 
-```bash
-npm install
-```
+The repository is connected to Vercel. Updates to `main` publish through the existing Vercel project.
 
-This will install Bootstrap, Sass and Font Awesome. To build your CSS files from Sass, run:
+## Local preview
 
-```bash
-npm run sass:build
-```
-
-To watch your Sass files for changes, run:
-
-```bash
-npm run sass:watch
-```
-
-You can add Bootstrap variables to the `bootstrap.scss` file. You can look at the file `node_modules/bootstrap/dist/scss/_variables.scss` for a list of all the variables. Do NOT edit the `variables.scss` file directly, as it will be overwritten when you update Bootstrap.
-
-To add your own custom styles, use the `styles.scss` file.
+Open `index.html` in a browser. The page uses Bootstrap from the official jsDelivr CDN; the approved banner is embedded in the HTML so no separate image upload is required.
