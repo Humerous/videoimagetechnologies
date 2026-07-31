@@ -24,13 +24,14 @@ The final scope and launch date will be confirmed as content is completed.
 
 ## Current landing page
 
-- Approved VIT spectrum banner and navy visual identity
-- Bootstrap 5.3.8 responsive layout
-- Desktop and mobile notification forms
-- JavaScript submission feedback and timeout handling
+- Systems-console layout inspired by premium technology interfaces
+- Approved VIT spectrum aperture and navy visual identity
+- Responsive editorial hero, technical visual and capability panels
+- One accessible notification form across desktop and mobile
+- JavaScript submission feedback and error handling
 - Accessible keyboard focus, live status messages and reduced-motion support
 - SEO, Open Graph and mobile metadata
-- Embedded WebP artwork for a portable single-file deployment
+- Optimised WebP artwork and logo assets
 
 ## Notifications
 
@@ -49,7 +50,7 @@ This repository is connected to Vercel. Updates to the `main` branch automatical
 
 ## Code
 
-The current production page is contained in `index.html`. Bootstrap is loaded from the official jsDelivr CDN, while the approved banner is embedded directly in the page.
+The current production page is contained in `index.html`. Dedicated landing-page artwork is stored in `/assets/landing/`. The page uses dependency-light HTML, CSS and JavaScript so the content and layout remain easy to maintain.
 
 ## Repository organisation
 
