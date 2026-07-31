@@ -99,9 +99,12 @@
         border-radius: 0;
         color: #fff !important;
         -webkit-text-fill-color: #fff;
-        background: var(--field) !important;
-        background-color: var(--field) !important;
+        background: transparent !important;
+        background-color: transparent !important;
         font-size: clamp(0.65rem, 1.3vw, 1.3rem);
+        font-weight: 500;
+        letter-spacing: 0.01em;
+        text-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
         box-shadow: none;
       }
 
@@ -113,8 +116,8 @@
       }
 
       .email-hotspot .form-control:focus {
-        background: var(--field) !important;
-        box-shadow: inset 0 0 0 1px rgba(65, 181, 255, 0.42);
+        background: rgba(2, 11, 29, 0.18) !important;
+        box-shadow: inset 0 0 0 1px rgba(104, 216, 255, 0.76);
       }
 
       .form-control:-webkit-autofill,
@@ -122,7 +125,7 @@
       .form-control:-webkit-autofill:focus {
         -webkit-text-fill-color: #fff;
         caret-color: #fff;
-        box-shadow: 0 0 0 1000px var(--field) inset !important;
+        box-shadow: 0 0 0 1000px #071634 inset !important;
         transition: background-color 9999s ease-out 0s;
       }
 
@@ -136,10 +139,13 @@
         background: transparent;
       }
 
-      .notify-hotspot:hover,
+      .notify-hotspot:hover {
+        background: rgba(255, 255, 255, 0.05);
+      }
+
       .notify-hotspot:focus-visible {
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: 0 0 22px rgba(29, 114, 255, 0.32);
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.74);
       }
 
       .email-hotspot:focus-within,
@@ -163,9 +169,13 @@
         height: 6.8%;
       }
 
-      .social-hotspot:hover {
+      .social-hotspot {
         border-radius: 8px;
-        background: rgba(255, 255, 255, 0.055);
+        transition: outline-color 160ms ease;
+      }
+
+      .social-hotspot:hover {
+        background: transparent;
       }
 
       .form-message {
