@@ -6,7 +6,7 @@ Video Image Technologies designs clear, dependable media and data systems—from
 
 The current site is a branded coming-soon experience while the full Video Image Technologies website is being prepared.
 
-**Live website:** https://videoimagetechnologies.vercel.app/
+**Live website:** https://www.videoimagetechnologies.co.za/
 
 ## What is coming
 
