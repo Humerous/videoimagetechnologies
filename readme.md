@@ -51,6 +51,15 @@ This repository is connected to Vercel. Updates to the `main` branch automatical
 
 The current production page is contained in `index.html`. Bootstrap is loaded from the official jsDelivr CDN, while the approved banner is embedded directly in the page.
 
+## Repository organisation
+
+- `/index.html` — current live coming-soon page
+- `/archive/legacy-site/` — reference to the preserved previous website
+- `/website-v2/` — workspace for the new full website
+- `/assets/`, `/css/` and `/js/` — legacy root files retained for reference until the migration is complete
+
+The production entry point stays at the repository root so organising the project does not interrupt the live site.
+
 ## Previous website
 
 The earlier website has not been deleted. It remains available in Git history at the final commit before the coming-soon replacement:
