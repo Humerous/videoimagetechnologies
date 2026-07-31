@@ -24,14 +24,13 @@ The final scope and launch date will be confirmed as content is completed.
 
 ## Current landing page
 
-- Approved VIT colour aperture logo and navy spectrum identity
-- Purpose-built, text-free atmospheric background artwork
-- Responsive semantic HTML and modern CSS rather than text baked into one banner
-- One accessible notification form that adapts cleanly across desktop and mobile
-- JavaScript submission feedback and error handling
+- Approved VIT spectrum banner and navy visual identity
+- Bootstrap 5.3.8 responsive layout
+- Desktop and mobile notification forms
+- JavaScript submission feedback and timeout handling
 - Accessible keyboard focus, live status messages and reduced-motion support
 - SEO, Open Graph and mobile metadata
-- Separate optimised landing-page assets for easier maintenance
+- Embedded WebP artwork for a portable single-file deployment
 
 ## Notifications
 
@@ -50,7 +49,7 @@ This repository is connected to Vercel. Updates to the `main` branch automatical
 
 ## Code
 
-The current production page is contained in `index.html`. Its dedicated artwork and logo files are in `/assets/landing/`. The page is deliberately dependency-light so it loads quickly and can be edited without rebuilding text inside an image.
+The current production page is contained in `index.html`. Bootstrap is loaded from the official jsDelivr CDN, while the approved banner is embedded directly in the page.
 
 ## Repository organisation
 
