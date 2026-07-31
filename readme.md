@@ -1,27 +1,60 @@
 # Video Image Technologies
 
-Responsive coming-soon landing page for Video Image Technologies.
+Video Image Technologies designs clear, dependable media and data systems—from ingest and processing through management, storage, protection and final handover.
 
-## Current experience
+## Website in progress
 
-- Approved VIT banner and spectrum branding
+The current site is a branded coming-soon experience while the full Video Image Technologies website is being prepared.
+
+**Live website:** https://videoimagetechnologies.vercel.app/
+
+## What is coming
+
+The full website is planned to provide:
+
+- An overview of Video Image Technologies and its approach to reliable systems
+- Media and data systems architecture services
+- Workflow guidance across **Ingest · Process · Manage · Store · Protect · Handover**
+- Clearer information about solution planning, integration and delivery
+- Selected capabilities, projects and technology experience
+- A direct route for project enquiries and consultations
+- Company news and links to official social channels
+
+The final scope and launch date will be confirmed as content is completed.
+
+## Current landing page
+
+- Approved VIT spectrum banner and navy visual identity
 - Bootstrap 5.3.8 responsive layout
-- JavaScript-powered launch notification form
-- Correct LinkedIn and Instagram links
-- Desktop interaction hotspots aligned to the approved artwork
-- Dedicated mobile email and social controls
-- Accessible keyboard focus, live form feedback, reduced-motion support, and VIT navy form states
-- Open Graph and SEO metadata
+- Desktop and mobile notification forms
+- JavaScript submission feedback and timeout handling
+- Accessible keyboard focus, live status messages and reduced-motion support
+- SEO, Open Graph and mobile metadata
+- Embedded WebP artwork for a portable single-file deployment
 
-## Contact links
+## Notifications
+
+The **Notify Me** form posts to Formspree form ID `xyyrqlen`. The receiving email address must be confirmed in the Formspree dashboard before launch notifications are promoted publicly.
+
+## Social links
 
 - Instagram: https://www.instagram.com/videoimagetechnologies
 - LinkedIn: https://www.linkedin.com/in/david-miller-07376015/
 
+The LinkedIn URL above is the current live destination and should be replaced when the confirmed company or preferred profile URL is supplied.
+
 ## Deployment
 
-The repository is connected to Vercel. Updates to `main` publish through the existing Vercel project.
+This repository is connected to Vercel. Updates to the `main` branch automatically publish to the existing production project.
 
-## Local preview
+## Code
 
-Open `index.html` in a browser. The page uses Bootstrap from the official jsDelivr CDN; the approved banner is embedded in the HTML so no separate image upload is required.
+The current production page is contained in `index.html`. Bootstrap is loaded from the official jsDelivr CDN, while the approved banner is embedded directly in the page.
+
+## Previous website
+
+The earlier website has not been deleted. It remains available in Git history at the final commit before the coming-soon replacement:
+
+- Previous website snapshot: https://github.com/Humerous/videoimagetechnologies/tree/ab7eb7671019c4651a25c63fbb7477736409a162
+- Previous `index.html`: https://github.com/Humerous/videoimagetechnologies/blob/ab7eb7671019c4651a25c63fbb7477736409a162/index.html
+- Complete commit history: https://github.com/Humerous/videoimagetechnologies/commits/main/
