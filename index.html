@@ -108,7 +108,11 @@
         box-shadow: none;
       }
 
-      .email-hotspot .form-control::placeholder,
+      .email-hotspot .form-control::placeholder {
+        color: transparent !important;
+        -webkit-text-fill-color: transparent;
+      }
+
       .mobile-form .form-control::placeholder {
         color: var(--placeholder) !important;
         -webkit-text-fill-color: var(--placeholder);
