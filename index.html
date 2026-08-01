@@ -12,11 +12,11 @@
     <meta property="og:description" content="Clear Vision. Reliable Systems." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="/assets/landing/vit-background.webp" />
-    <link rel="icon" type="image/x-icon" href="/assets/favicon_io/favicon.ico?v=20260731" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon_io/favicon-32x32.png?v=20260731" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon_io/favicon-16x16.png?v=20260731" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon_io/apple-touch-icon.png?v=20260731" />
-    <link rel="manifest" href="/assets/favicon_io/site.webmanifest?v=20260731" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon_io/favicon.ico?v=20260801" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon_io/favicon-32x32.png?v=20260801" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon_io/favicon-16x16.png?v=20260801" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon_io/apple-touch-icon.png?v=20260801" />
+    <link rel="manifest" href="/assets/favicon_io/site.webmanifest?v=20260801" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -791,7 +791,9 @@
         }
 
         .topbar {
-          height: 70px;
+          height: calc(64px + env(safe-area-inset-top));
+          padding-top: env(safe-area-inset-top);
+          grid-template-columns: auto 1fr auto;
         }
 
         .topnav {
@@ -801,7 +803,7 @@
         .system-status {
           justify-self: end;
           border-left: 0;
-          padding-inline: 18px;
+          padding-inline: 16px;
         }
 
         .hero {
@@ -811,34 +813,43 @@
         }
 
         .hero-copy {
-          min-height: 580px;
-          padding: 64px 28px 58px;
+          min-height: auto;
+          padding: 48px 24px 42px;
           border-right: 0;
         }
 
         .hero-lockup {
           max-width: 680px;
-          grid-template-columns: 94px 1px minmax(0, 1fr);
+          grid-template-columns: 88px 1px minmax(0, 1fr);
         }
 
         .visual {
-          min-height: 480px;
+          min-height: 340px;
           border-top: 1px solid var(--line);
         }
 
         .aperture-wrap {
-          width: min(360px, 66vw);
+          width: min(290px, 62vw);
+        }
+
+        .tech-note.one {
+          top: 19%;
+        }
+
+        .tech-note.two {
+          bottom: 19%;
         }
 
         .workflow-strip {
           position: relative;
           left: auto;
           min-height: auto;
+          padding-bottom: env(safe-area-inset-bottom);
           grid-template-columns: repeat(3, 1fr);
         }
 
         .workflow-step {
-          min-height: 58px;
+          min-height: 54px;
         }
 
         .workflow-step:nth-child(4) {
@@ -857,58 +868,101 @@
 
       @media (max-width: 520px) {
         .brand {
-          padding-inline: 16px;
+          gap: 9px;
+          padding-inline: 14px;
         }
 
         .brand img {
-          width: 34px;
-          height: 34px;
+          width: 32px;
+          height: 32px;
+        }
+
+        .brand span {
+          font-size: 0.6rem;
+          letter-spacing: 0.12em;
         }
 
         .system-status {
-          font-size: 0.52rem;
-          letter-spacing: 0.1em;
+          gap: 0;
+          padding-inline: 14px;
+          font-size: 0;
+        }
+
+        .status-light {
+          width: 8px;
+          height: 8px;
+          flex-basis: 8px;
         }
 
         .hero-copy {
-          min-height: 620px;
-          padding-inline: 20px;
+          min-height: auto;
+          padding: 42px 18px 36px;
+        }
+
+        .micro-label {
+          gap: 9px;
+          margin-bottom: 18px;
+          font-size: 0.54rem;
+          letter-spacing: 0.15em;
+        }
+
+        .micro-label::before {
+          width: 22px;
         }
 
         .hero-lockup {
-          grid-template-columns: 68px 1px minmax(0, 1fr);
-          gap: 12px;
+          grid-template-columns: 58px 1px minmax(0, 1fr);
+          gap: 10px;
         }
 
         .lockup-divider {
-          min-height: 78px;
+          min-height: 70px;
         }
 
         h1 {
-          font-size: clamp(1.72rem, 8.8vw, 2.45rem);
+          font-size: clamp(1.45rem, 7.6vw, 2rem);
+          line-height: 0.95;
+          letter-spacing: -0.045em;
         }
 
         .tagline {
-          margin-top: 10px;
-          font-size: 0.84rem;
+          margin-top: 8px;
+          font-size: 0.78rem;
+        }
+
+        .spectrum-rule {
+          margin-top: 20px;
         }
 
         .architecture-label {
-          letter-spacing: 0.16em;
+          margin-top: 14px;
+          font-size: 0.625rem;
+          letter-spacing: 0.1em;
+          line-height: 1.6;
         }
 
         .progress-signature {
-          gap: 10px;
-          letter-spacing: 0.17em;
+          gap: 8px;
+          margin-top: 14px;
+          font-size: 0.625rem;
+          letter-spacing: 0.12em;
+          white-space: nowrap;
         }
 
         .progress-dots {
-          gap: 6px;
+          gap: 4px;
+        }
+
+        .progress-dots span {
+          width: 5px;
+          height: 5px;
+          flex-basis: 5px;
         }
 
         .notify-form {
           grid-template-columns: 1fr;
           gap: 10px;
+          margin-top: 20px;
           padding: 0;
           border-radius: 0;
           background: transparent;
@@ -924,31 +978,100 @@
           overflow: hidden;
         }
 
+        .email-icon {
+          margin-left: 16px;
+        }
+
+        .notify-form input {
+          height: 54px;
+          padding-right: 14px;
+          font-size: 16px;
+        }
+
         .notify-form button {
-          min-height: 52px;
+          min-height: 50px;
           border: 1px solid rgba(116, 125, 255, 0.6);
           border-radius: 8px;
         }
 
+        .form-message {
+          margin-top: 8px;
+        }
+
+        .social-links {
+          min-height: 44px;
+          margin-top: 8px;
+        }
+
         .social-links a {
-          gap: 9px;
-          font-size: 0.52rem;
-          letter-spacing: 0.16em;
+          min-height: 48px;
+          gap: 7px;
+          padding: 8px;
+          font-size: 0.625rem;
+          letter-spacing: 0.12em;
+        }
+
+        .social-icon {
+          width: 22px;
+          height: 22px;
+          flex-basis: 22px;
         }
 
         .visual {
-          min-height: 410px;
+          min-height: 300px;
         }
 
-        .tech-note::after {
-          width: 28px;
+        .aperture-wrap {
+          width: min(240px, 62vw);
+        }
+
+        .tech-note {
+          display: none;
         }
 
         .workflow-step {
-          gap: 8px;
+          min-height: 56px;
+          gap: 7px;
           padding-inline: 6px;
-          font-size: 0.48rem;
-          letter-spacing: 0.14em;
+          font-size: 0.58rem;
+          letter-spacing: 0.1em;
+        }
+      }
+
+      @media (max-width: 360px) {
+        .brand span {
+          display: none;
+        }
+
+        .hero-copy {
+          padding-inline: 16px;
+        }
+
+        .hero-lockup {
+          grid-template-columns: 52px 1px minmax(0, 1fr);
+          gap: 8px;
+        }
+
+        .lockup-divider {
+          min-height: 62px;
+        }
+
+        h1 {
+          font-size: 1.48rem;
+        }
+
+        .progress-dots {
+          display: none;
+        }
+
+        .social-links a {
+          font-size: 0.56rem;
+          letter-spacing: 0.08em;
+        }
+
+        .workflow-step {
+          font-size: 0.52rem;
+          letter-spacing: 0.08em;
         }
       }
 
