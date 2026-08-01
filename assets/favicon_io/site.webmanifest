@@ -3,14 +3,16 @@
   "short_name": "VIT",
   "icons": [
     {
-      "src": "/assets/favicon_io/favicon-32x32.png?v=20260801",
-      "sizes": "32x32",
-      "type": "image/png"
+      "src": "/assets/favicon_io/android-chrome-192x192.png?v=20260801-3",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
     },
     {
-      "src": "/assets/favicon_io/apple-touch-icon.png?v=20260801",
-      "sizes": "180x180",
-      "type": "image/png"
+      "src": "/assets/favicon_io/android-chrome-512x512.png?v=20260801-3",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
     }
   ],
   "theme_color": "#030817",
