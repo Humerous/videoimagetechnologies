@@ -274,10 +274,13 @@
       }
 
       .hero-mark {
+        display: block;
         width: 100%;
-        aspect-ratio: 1;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        align-self: center;
         border-radius: 50%;
-        object-fit: cover;
+        object-fit: contain;
         filter: saturate(1.05) contrast(1.06);
         box-shadow:
           0 0 36px rgba(40, 112, 255, 0.24),
@@ -915,6 +918,13 @@
           gap: 10px;
         }
 
+        .hero-mark {
+          width: 58px;
+          height: 58px;
+          max-width: 100%;
+          justify-self: center;
+        }
+
         .lockup-divider {
           min-height: 70px;
         }
@@ -1050,6 +1060,11 @@
         .hero-lockup {
           grid-template-columns: 52px 1px minmax(0, 1fr);
           gap: 8px;
+        }
+
+        .hero-mark {
+          width: 52px;
+          height: 52px;
         }
 
         .lockup-divider {
