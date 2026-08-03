@@ -1,0 +1,190 @@
+name: One-time VIT holding page update
+
+on:
+  push:
+    branches:
+      - agent/finalise-vit-holding-page
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/finalise-vit-holding-page
+          fetch-depth: 0
+
+      - name: Apply approved holding-page updates
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+
+          index_path = Path('index.html')
+          html = index_path.read_text(encoding='utf-8')
+
+          def replace_once(old: str, new: str) -> None:
+              global html
+              count = html.count(old)
+              if count != 1:
+                  raise SystemExit(f'Expected one occurrence of {old!r}, found {count}')
+              html = html.replace(old, new, 1)
+
+          if 'property="og:url"' not in html:
+              replace_once(
+                  '    <meta property="og:type" content="website" />\n',
+                  '    <meta property="og:type" content="website" />\n'
+                  '    <meta property="og:url" content="https://www.videoimagetechnologies.co.za/" />\n'
+              )
+
+          if 'rel="canonical"' not in html:
+              replace_once(
+                  '    <meta property="og:image" content="/assets/landing/vit-background.webp" />\n',
+                  '    <meta property="og:image" content="/assets/landing/vit-background.webp" />\n'
+                  '    <link rel="canonical" href="https://www.videoimagetechnologies.co.za/" />\n'
+              )
+
+          replace_once('aria-label="Website in progress"', 'aria-label="Full website launching soon"')
+          replace_once('<span>Website in progress</span>', '<span>Full website launching soon</span>')
+          replace_once(
+              'aria-label="Request a website launch notification"',
+              'aria-label="Contact Video Image Technologies"'
+          )
+          replace_once('<button type="submit">Notify me</button>', '<button type="submit">Contact VIT</button>')
+          replace_once(
+              'message.textContent = "Thank you — we’ll let you know when the full site is live.";',
+              'message.textContent = "Thank you. VIT will be in contact.";'
+          )
+
+          if '.contact-meta {' not in html:
+              replace_once(
+                  '      .workflow-strip {\n',
+                  '      .contact-meta {\n'
+                  '        width: min(590px, 100%);\n'
+                  '        display: flex;\n'
+                  '        align-items: center;\n'
+                  '        justify-content: center;\n'
+                  '        gap: 12px;\n'
+                  '        margin: 10px 0 0;\n'
+                  '        color: #8794aa;\n'
+                  '        font-size: 0.58rem;\n'
+                  '        font-weight: 600;\n'
+                  '        letter-spacing: 0.12em;\n'
+                  '        text-align: center;\n'
+                  '        text-transform: uppercase;\n'
+                  '      }\n\n'
+                  '      .contact-meta span + span::before {\n'
+                  '        margin-right: 12px;\n'
+                  '        color: #56647a;\n'
+                  '        content: "•";\n'
+                  '      }\n\n'
+                  '      .contact-meta a {\n'
+                  '        text-decoration: none;\n'
+                  '      }\n\n'
+                  '      .contact-meta a:hover,\n'
+                  '      .contact-meta a:focus-visible {\n'
+                  '        color: #fff;\n'
+                  '      }\n\n'
+                  '      .workflow-strip {\n'
+              )
+
+          if 'class="contact-meta"' not in html:
+              replace_once(
+                  '            </nav>\n          </div>\n\n          <div class="visual"',
+                  '            </nav>\n'
+                  '            <p class="contact-meta">\n'
+                  '              <span>Cape Town, South Africa</span>\n'
+                  '              <span><a href="https://www.videoimagetechnologies.co.za/">videoimagetechnologies.co.za</a></span>\n'
+                  '            </p>\n'
+                  '          </div>\n\n'
+                  '          <div class="visual"'
+              )
+
+          if '@media (max-width: 520px)' in html and '.contact-meta {' in html and 'flex-direction: column;' not in html.split('@media (max-width: 520px)', 1)[1].split('@media (max-width: 360px)', 1)[0]:
+              replace_once(
+                  '        .visual {\n          min-height: 300px;\n        }\n',
+                  '        .contact-meta {\n'
+                  '          flex-direction: column;\n'
+                  '          gap: 4px;\n'
+                  '          letter-spacing: 0.08em;\n'
+                  '        }\n\n'
+                  '        .contact-meta span + span::before {\n'
+                  '          display: none;\n'
+                  '        }\n\n'
+                  '        .visual {\n'
+                  '          min-height: 300px;\n'
+                  '        }\n'
+              )
+
+          index_path.write_text(html, encoding='utf-8')
+
+          readme_path = Path('readme.md')
+          readme = readme_path.read_text(encoding='utf-8')
+          readme = readme.replace('## Website in progress', '## Live holding page')
+          readme = readme.replace(
+              'The current site is a branded coming-soon experience while the full Video Image Technologies website is being prepared.',
+              'The current site is a branded holding page while the full Video Image Technologies website is being prepared.'
+          )
+          readme = readme.replace(
+              '**Live website:** https://www.videoimagetechnologies.co.za/',
+              '**Official website:** https://www.videoimagetechnologies.co.za/\n\nAll alternate `.co.za` and `.com` addresses should resolve or redirect to this primary address.'
+          )
+          readme = readme.replace(
+              '- One accessible notification form across desktop and mobile',
+              '- One accessible contact form across desktop and mobile'
+          )
+          readme = readme.replace(
+              '## Notifications\n\nThe **Notify Me** form posts to Formspree form ID `xyyrqlen`. The receiving email address must be confirmed in the Formspree dashboard before launch notifications are promoted publicly.',
+              '## Contact form\n\nThe **Contact VIT** form posts to Formspree form ID `xyyrqlen`. The receiving email address must be confirmed in the Formspree dashboard before the form is promoted publicly.'
+          )
+          readme_path.write_text(readme, encoding='utf-8')
+
+          vercel = {
+              '$schema': 'https://openapi.vercel.sh/vercel.json',
+              'redirects': [
+                  {
+                      'source': '/:path*',
+                      'has': [{'type': 'header', 'key': 'host', 'value': 'videoimagetechnologies.co.za'}],
+                      'destination': 'https://www.videoimagetechnologies.co.za/:path*',
+                      'permanent': True,
+                  },
+                  {
+                      'source': '/:path*',
+                      'has': [{'type': 'header', 'key': 'host', 'value': 'videoimagetechnologies.com'}],
+                      'destination': 'https://www.videoimagetechnologies.co.za/:path*',
+                      'permanent': True,
+                  },
+                  {
+                      'source': '/:path*',
+                      'has': [{'type': 'header', 'key': 'host', 'value': 'www.videoimagetechnologies.com'}],
+                      'destination': 'https://www.videoimagetechnologies.co.za/:path*',
+                      'permanent': True,
+                  },
+              ],
+          }
+          Path('vercel.json').write_text(json.dumps(vercel, indent=2) + '\n', encoding='utf-8')
+
+          workflow = Path('.github/workflows/vit-holding-update.yml')
+          if workflow.exists():
+              workflow.unlink()
+          PY
+
+          grep -q 'Full website launching soon' index.html
+          grep -q 'Contact VIT' index.html
+          grep -q 'Cape Town, South Africa' index.html
+          grep -q 'rel="canonical" href="https://www.videoimagetechnologies.co.za/"' index.html
+          grep -q 'www.videoimagetechnologies.com' vercel.json
+
+      - name: Commit approved changes
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Finalise VIT holding page and canonical domain"
+          git push origin HEAD:agent/finalise-vit-holding-page
