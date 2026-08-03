@@ -1,0 +1,41 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "header",
+          "key": "host",
+          "value": "videoimagetechnologies.co.za"
+        }
+      ],
+      "destination": "https://www.videoimagetechnologies.co.za/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "header",
+          "key": "host",
+          "value": "videoimagetechnologies.com"
+        }
+      ],
+      "destination": "https://www.videoimagetechnologies.co.za/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "header",
+          "key": "host",
+          "value": "www.videoimagetechnologies.com"
+        }
+      ],
+      "destination": "https://www.videoimagetechnologies.co.za/:path*",
+      "permanent": true
+    }
+  ]
+}
