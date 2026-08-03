@@ -101,7 +101,7 @@
       .console {
         position: relative;
         width: min(1480px, 100%);
-        min-height: min(820px, calc(100svh - 72px));
+        min-height: min(854px, calc(100svh - 72px));
         overflow: hidden;
         border: 12px solid #070913;
         border-radius: 34px;
@@ -244,7 +244,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 64px clamp(42px, 6vw, 96px) 94px;
+        padding: 64px clamp(42px, 6vw, 96px) 128px;
         border-right: 1px solid var(--line);
       }
 
@@ -695,7 +695,7 @@
         position: absolute;
         z-index: 5;
         right: 0;
-        bottom: 0;
+        bottom: 34px;
         left: 0;
         min-height: 74px;
         display: grid;
@@ -727,11 +727,33 @@
         position: absolute;
         z-index: 8;
         right: 0;
-        bottom: 73px;
+        bottom: 107px;
         left: 0;
         height: 3px;
         background: linear-gradient(90deg, var(--red), var(--orange), var(--green), var(--cyan), var(--blue), var(--purple));
         opacity: 0.9;
+      }
+
+      .site-footer {
+        position: absolute;
+        z-index: 6;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        min-height: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+        padding: 8px 16px;
+        border-top: 1px solid rgba(172, 194, 230, 0.09);
+        background: rgba(2, 6, 16, 0.96);
+        color: #7f8ca2;
+        font-size: 0.54rem;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-align: center;
+        text-transform: uppercase;
       }
 
       @keyframes pulse {
@@ -848,8 +870,9 @@
         .workflow-strip {
           position: relative;
           left: auto;
+          bottom: auto;
           min-height: auto;
-          padding-bottom: env(safe-area-inset-bottom);
+          padding-bottom: 0;
           grid-template-columns: repeat(3, 1fr);
         }
 
@@ -868,6 +891,13 @@
         .spectrum-line {
           position: relative;
           bottom: auto;
+        }
+
+        .site-footer {
+          position: relative;
+          bottom: auto;
+          min-height: calc(40px + env(safe-area-inset-bottom));
+          padding-bottom: calc(8px + env(safe-area-inset-bottom));
         }
       }
 
@@ -1048,6 +1078,13 @@
           font-size: 0.58rem;
           letter-spacing: 0.1em;
         }
+
+        .site-footer {
+          flex-wrap: wrap;
+          gap: 6px;
+          font-size: 0.5rem;
+          letter-spacing: 0.1em;
+        }
       }
 
       @media (max-width: 360px) {
@@ -1193,7 +1230,6 @@
               ><span class="social-icon instagram" aria-hidden="true"></span><span>Instagram</span></a>
             </nav>
             <p class="form-message" style="min-height:0;text-align:center;letter-spacing:0.08em;text-transform:uppercase">
-              <span>Established 2016 · 10 Years</span><br />
               Cape Town, South Africa ·
               <a href="https://www.videoimagetechnologies.co.za/" style="text-decoration:none">videoimagetechnologies.co.za</a>
             </p>
@@ -1223,10 +1259,22 @@
           <div class="workflow-step"><span>Protect</span><span class="workflow-dot cyan" aria-hidden="true"></span></div>
           <div class="workflow-step"><span>Handover</span><span class="workflow-dot purple" aria-hidden="true"></span></div>
         </section>
+        <footer class="site-footer" aria-label="Company information">
+          <span>Video Image Technologies</span>
+          <span aria-hidden="true">·</span>
+          <span class="year-range"></span>
+        </footer>
       </main>
     </div>
 
     <script>
+      const companyStartYear = 2016;
+      const currentYear = new Date().getFullYear();
+      const yearToDate = document.querySelector(".year-range");
+      if (yearToDate) {
+        yearToDate.textContent = `${companyStartYear} - ${currentYear}`;
+      }
+
       const form = document.querySelector(".notify-form");
       const message = document.querySelector(".form-message");
       const submit = form.querySelector("button");
