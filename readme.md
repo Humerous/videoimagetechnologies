@@ -2,11 +2,13 @@
 
 Video Image Technologies designs clear, dependable media and data systems—from ingest and processing through management, storage, protection and final handover.
 
-## Website in progress
+## Live holding page
 
-The current site is a branded coming-soon experience while the full Video Image Technologies website is being prepared.
+The current site is a branded holding page while the full Video Image Technologies website is being prepared.
 
-**Live website:** https://www.videoimagetechnologies.co.za/
+**Official website:** https://www.videoimagetechnologies.co.za/
+
+All alternate `.co.za` and `.com` addresses should resolve or redirect to this primary address.
 
 ## What is coming
 
@@ -27,15 +29,15 @@ The final scope and launch date will be confirmed as content is completed.
 - Systems-console layout inspired by premium technology interfaces
 - Approved VIT spectrum aperture and navy visual identity
 - Responsive editorial hero, technical visual and capability panels
-- One accessible notification form across desktop and mobile
+- One accessible contact form across desktop and mobile
 - JavaScript submission feedback and error handling
 - Accessible keyboard focus, live status messages and reduced-motion support
-- SEO, Open Graph and mobile metadata
+- SEO, canonical, Open Graph and mobile metadata
 - Optimised WebP artwork and logo assets
 
-## Notifications
+## Contact form
 
-The **Notify Me** form posts to Formspree form ID `xyyrqlen`. The receiving email address must be confirmed in the Formspree dashboard before launch notifications are promoted publicly.
+The **Contact VIT** form posts to Formspree form ID `xyyrqlen`. The receiving email address must be confirmed in the Formspree dashboard before the form is promoted publicly.
 
 ## Social links
 
@@ -46,7 +48,9 @@ The LinkedIn URL above has been confirmed as the correct destination.
 
 ## Deployment
 
-This repository is connected to Vercel. Updates to the `main` branch automatically publish to the existing production project.
+This repository is connected to Vercel. Updates merged into the `main` branch automatically publish to the existing production project.
+
+The primary public address is `https://www.videoimagetechnologies.co.za/`. The apex `.co.za` domain and both `.com` variants are configured in `vercel.json` to redirect permanently to the primary address.
 
 ## Code
 
@@ -54,7 +58,7 @@ The current production page is contained in `index.html`. Dedicated landing-page
 
 ## Repository organisation
 
-- `/index.html` — current live coming-soon page
+- `/index.html` — current live holding page
 - `/archive/legacy-site/` — reference to the preserved previous website
 - `/website-v2/` — workspace for the new full website
 - `/assets/`, `/css/` and `/js/` — legacy root files retained for reference until the migration is complete
@@ -63,7 +67,7 @@ The production entry point stays at the repository root so organising the projec
 
 ## Previous website
 
-The earlier website has not been deleted. It remains available in Git history at the final commit before the coming-soon replacement:
+The earlier website has not been deleted. It remains available in Git history at the final commit before the holding-page replacement:
 
 - Previous website snapshot: https://github.com/Humerous/videoimagetechnologies/tree/ab7eb7671019c4651a25c63fbb7477736409a162
 - Previous `index.html`: https://github.com/Humerous/videoimagetechnologies/blob/ab7eb7671019c4651a25c63fbb7477736409a162/index.html
