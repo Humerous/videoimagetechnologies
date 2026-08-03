@@ -4,11 +4,17 @@ Video Image Technologies designs clear, dependable media and data systems—from
 
 ## Live holding page
 
-The current site is a branded holding page while the full Video Image Technologies website is being prepared.
+The current production site is a branded holding page while the full Video Image Technologies website is prepared.
 
 **Official website:** https://www.videoimagetechnologies.co.za/
 
-All alternate `.co.za` and `.com` addresses should resolve or redirect to this primary address.
+The page establishes the current VIT identity, provides a direct contact route, and displays the company location and service workflow.
+
+## Company
+
+- Established: 2016
+- Current milestone: 10 years in 2026
+- Location: Cape Town, South Africa
 
 ## What is coming
 
@@ -32,7 +38,7 @@ The final scope and launch date will be confirmed as content is completed.
 - One accessible contact form across desktop and mobile
 - JavaScript submission feedback and error handling
 - Accessible keyboard focus, live status messages and reduced-motion support
-- SEO, canonical, Open Graph and mobile metadata
+- Canonical, SEO, Open Graph and mobile metadata
 - Optimised WebP artwork and logo assets
 
 ## Contact form
@@ -48,9 +54,13 @@ The LinkedIn URL above has been confirmed as the correct destination.
 
 ## Deployment
 
-This repository is connected to Vercel. Updates merged into the `main` branch automatically publish to the existing production project.
+This repository is connected to Vercel. Updates to the `main` branch automatically publish to the existing production project.
 
-The primary public address is `https://www.videoimagetechnologies.co.za/`. The apex `.co.za` domain and both `.com` variants are configured in `vercel.json` to redirect permanently to the primary address.
+The canonical public domain is:
+
+- https://www.videoimagetechnologies.co.za/
+
+The apex `.co.za` domain and both `.com` variants are configured to redirect permanently to the canonical domain.
 
 ## Code
 
