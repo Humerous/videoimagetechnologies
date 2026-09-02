@@ -40,9 +40,7 @@ The **Notify Me** form posts to Formspree form ID `xyyrqlen`. The receiving emai
 ## Social links
 
 - Instagram: https://www.instagram.com/videoimagetechnologies
-- LinkedIn: https://www.linkedin.com/in/david-miller-07376015
-
-The LinkedIn URL above has been confirmed as the correct destination.
+- LinkedIn: https://www.linkedin.com/in/davidkennithmiller/
 
 ## Deployment
 
