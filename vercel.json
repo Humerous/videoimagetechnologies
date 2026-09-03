@@ -6,7 +6,7 @@
       "has": [
         { "type": "host", "value": "videoimagetechnologies.vercel.app" }
       ],
-      "destination": "https://www.videoimagetechnologies.co.za/:path*",
+      "destination": "https://videoimagetechnologies.co.za/:path*",
       "permanent": true
     },
     {
@@ -14,7 +14,7 @@
       "has": [
         { "type": "host", "value": "videoimagetechnologies-chameleonunicodestudios.vercel.app" }
       ],
-      "destination": "https://www.videoimagetechnologies.co.za/:path*",
+      "destination": "https://videoimagetechnologies.co.za/:path*",
       "permanent": true
     },
     {
@@ -22,7 +22,7 @@
       "has": [
         { "type": "host", "value": "videoimagetechnologies-git-main-chameleonunicodestudios.vercel.app" }
       ],
-      "destination": "https://www.videoimagetechnologies.co.za/:path*",
+      "destination": "https://videoimagetechnologies.co.za/:path*",
       "permanent": true
     },
     {
@@ -30,7 +30,7 @@
       "has": [
         { "type": "host", "value": "videoimagetechnologies.com" }
       ],
-      "destination": "https://www.videoimagetechnologies.co.za/:path*",
+      "destination": "https://videoimagetechnologies.co.za/:path*",
       "permanent": true
     },
     {
@@ -38,7 +38,7 @@
       "has": [
         { "type": "host", "value": "www.videoimagetechnologies.com" }
       ],
-      "destination": "https://www.videoimagetechnologies.co.za/:path*",
+      "destination": "https://videoimagetechnologies.co.za/:path*",
       "permanent": true
     }
   ],
@@ -48,7 +48,7 @@
       "headers": [
         {
           "key": "Link",
-          "value": "<https://www.videoimagetechnologies.co.za/>; rel=\"canonical\""
+          "value": "<https://videoimagetechnologies.co.za/>; rel=\"canonical\""
         }
       ]
     }
