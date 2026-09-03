@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#F5F7FB" />
+    <meta
+      name="description"
+      content="Video Image Technologies designs clear, dependable media and data systems from ingest through handover."
+    />
+    <title>Video Image Technologies | Clear Vision. Reliable Systems.</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="site-container site-header__inner">
+        <a class="site-brand" href="/" aria-label="Video Image Technologies home">
+          <img
+            class="site-brand__logo"
+            src="/assets/branding/vit-logo.png"
+            alt="Video Image Technologies"
+          />
+          <span class="site-brand__wordmark" aria-hidden="true">
+            <span>Video Image</span>
+            <span>Technologies</span>
+          </span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+          aria-label="Open navigation"
+          data-menu-toggle
+        >
+          <span class="menu-toggle__label">Menu</span>
+          <span class="menu-toggle__icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+
+        <nav
+          class="site-nav"
+          id="primary-navigation"
+          aria-label="Primary"
+          data-site-nav
+        >
+          <ul class="site-nav__list">
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="/" aria-current="page">Home</a>
+            </li>
+
+            <li class="site-nav__item site-nav__item--services">
+              <div class="services-trigger">
+                <a class="site-nav__link" href="/services/">Services</a>
+                <button
+                  class="services-toggle"
+                  type="button"
+                  aria-controls="services-navigation"
+                  aria-expanded="false"
+                  aria-label="Toggle Services navigation"
+                  data-services-toggle
+                >
+                  <span aria-hidden="true">⌄</span>
+                </button>
+              </div>
+
+              <ul
+                class="services-menu"
+                id="services-navigation"
+                aria-label="Services"
+                data-services-menu
+              >
+                <li>
+                  <a href="/services/data-management-archive/">
+                    Data Management &amp; Archive
+                  </a>
+                </li>
+                <li>
+                  <a href="/services/workflow-systems-technical-auditing/">
+                    Workflow, Systems &amp; Technical Auditing
+                  </a>
+                </li>
+                <li>
+                  <a href="/services/data-recovery-support/">
+                    Data Recovery &amp; Support
+                  </a>
+                </li>
+                <li>
+                  <a href="/services/on-set-post-production-services/">
+                    On-Set &amp; Post-Production Services
+                  </a>
+                </li>
+                <li>
+                  <a href="/services/equipment-rentals/">Equipment Rentals</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="/about/">About VIT</a>
+            </li>
+
+            <li class="site-nav__item site-nav__item--contact">
+              <a class="button button--primary" href="/contact/">CONTACT US</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" class="site-main" tabindex="-1">
+      <!-- Homepage content is intentionally deferred to later authorised blocks. -->
+    </main>
+  </body>
+</html>
